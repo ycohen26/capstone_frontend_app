@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import BikesIndex from '../views/BikesIndex.vue'
+import BikesNew from '../views/BikesIndex.vue'
+import BikesShow from '../views/BikesShow.vue'
 import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
@@ -24,9 +26,19 @@ Vue.use(VueRouter)
     component: Logout
   },
   {
-    path: '/',
+    path: '/bikes',
     name: 'bikes-index',
     component: BikesIndex
+  },
+  {
+    path: '/bikes',
+    name: 'bikes-new',
+    component: BikesNew
+  },
+  {
+    path: '/bikes/:id',
+    name: 'bikes-show',
+    component: BikesShow
   },
   {
     path: '/about',

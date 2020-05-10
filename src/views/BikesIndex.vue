@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <div v-bind:key="bike.id" v-for="bike in bikes" v-onclick:"">
+    <div v-bind:key="bike.id" v-for="bike in bikes">
+      <img v-bind:src="bike.photos[0].image_url"/>
       <p>id: {{ bike.id }}</p>
       <p>seller_id: {{ bike.seller_id }}</p>
       <p>buyer_id: {{ bike.buyer_id }}</p>
@@ -21,7 +22,6 @@
       <p>im_a_shop: {{ bike.im_a_shop }}</p>
       <p>negotiable_price: {{ bike.negotiable_price }}</p>
       <p>price: {{ bike.price }}</p>
-      <img v-bind:src="bike.photos[0].image_url"/>
       <!-- <img v-for="photo in bike.photos" v-bind:src="photo.image_url"/> -->
       <p>favorites: {{ bike.favorites }}</p>
       <p>comments: {{ bike.comment }}</p>
@@ -38,10 +38,7 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      bikes: [],
-      photos: [],
-      favorites: [],
-      comments: []
+      bikes: []
     };
   },
   created: function() {
