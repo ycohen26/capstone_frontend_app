@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import BikesIndex from '../views/BikesIndex.vue'
-import BikesNew from '../views/BikesNew.vue'
-import BikesShow from '../views/BikesShow.vue'
 import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
+import BikesIndex from '../views/BikesIndex.vue'
+import BikesNew from '../views/BikesNew.vue'
+import BikesShow from '../views/BikesShow.vue'
+import BikesEdit from '../views/BikesEdit.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ Vue.use(VueRouter)
     path: '/bikes/:id',
     name: 'bikes-show',
     component: BikesShow
+  },
+  {
+    path: '/bikes/:id/edit',
+    name: 'bikes-edit',
+    component: BikesEdit
   },
   {
     path: '/about',

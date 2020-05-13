@@ -24,7 +24,7 @@
     <p>favorites: {{ bike.favorites }}</p>
     <p>comments: {{ bike.comment }}</p>
 
-    <a v-if="bike.seller_id === $parent.getUserId()" v-bind:href="`/bikes/${bike.id}/edit`">Edit this bike</a>
+    <a v-if="bike.seller_id === getUserId()" v-bind:href="`/bikes/${bike.id}/edit`">Edit this bike</a>
 
   </div>
 </template>
@@ -48,6 +48,11 @@ export default {
       this.bike = response.data;
     })
   },
-  methods: {}
+  methods: {
+    getUserId: function() {
+      console.log(localStorage.getItem("user_id"));
+      return parseInt(localStorage.getItem("user_id"));
+    }
+  }
 };
 </script>

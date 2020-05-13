@@ -2,89 +2,89 @@
   <div class="bikess-new">
     <div class="container">      
       <form v-on:submit.prevent="submit()">
-        <h1>Post a Bike</h1>
+        <h1>Edit Your Bike</h1>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
         <div class="form-group">
           <label>Brand:</label> 
-          <input type="text" class="form-control" v-model="brand">
+          <input type="text" class="form-control" v-model="bike.brand">
         </div>
         <div class="form-group">
           <label>Model:</label>
-          <input type="text" class="form-control" v-model="model">
+          <input type="text" class="form-control" v-model="bike.model">
         </div>
         <div class="form-group">
           <label>Size:</label>
-          <input type="text" class="form-control" v-model="size">
+          <input type="text" class="form-control" v-model="bike.size">
         </div>
         <div class="form-group">
           <label>Speeds:</label>
-          <input type="text" class="form-control" v-model="speeds">
+          <input type="text" class="form-control" v-model="bike.speeds">
         </div>
         <div class="form-group">
           <label>Plates:</label>
-          <input type="text" class="form-control" v-model="plates">
+          <input type="text" class="form-control" v-model="bike.plates">
         </div>
         <div class="form-group">
           <label>Group:</label>
-          <input type="text" class="form-control" v-model="group">
+          <input type="text" class="form-control" v-model="bike.group">
         </div>
         <div class="form-group">
           <label>Frame material:</label>
-          <input type="text" class="form-control" v-model="frame_material">
+          <input type="text" class="form-control" v-model="bike.frame_material">
         </div>
         <div class="form-group">
           <label>Fork material:</label>
-          <input type="text" class="form-control" v-model="fork_material">
+          <input type="text" class="form-control" v-model="bike.fork_material">
         </div>
         <div class="form-group">
           <label>Year of Purchase:</label>
-          <input type="text" class="form-control" v-model="year_of_purchase">
+          <input type="text" class="form-control" v-model="bike.year_of_purchase">
         </div>
         <div class="form-group">
           <label>Wheels</label>
-          <input type="text" class="form-control" v-model="wheels">
+          <input type="text" class="form-control" v-model="bike.wheels">
         </div>
         <div class="form-group">
           <label>Aestetic Condition</label>
-          <input type="text" class="form-control" v-model="aestetic_condition">
+          <input type="text" class="form-control" v-model="bike.aestetic_condition">
         </div>
         <div class="form-group">
           <label>Mechanical_condition</label>
-          <input type="text" class="form-control" v-model="mechanical_condition">
+          <input type="text" class="form-control" v-model="bike.mechanical_condition">
         </div>
         <div class="form-group">
           <label>Has pedals?</label>
-          <select v-model="has_pedals">
+          <select v-model="bike.has_pedals">
             <option value="True">yes</option>
             <option value="False">No</option>
           </select>
         </div>
         <div class="form-group">
           <label>Original receipt?</label>
-          <select v-model="original_receipt">
+          <select v-model="bike.original_receipt">
             <option value="True">yes</option>
             <option value="False">No</option>
           </select>
         </div>
         <div class="form-group">
           <label>I'm a Shop?</label>
-          <select v-model="im_a_shop">
+          <select v-model="bike.im_a_shop">
             <option value="True">yes</option>
             <option value="False">No</option>
           </select>
         </div>
         <div class="form-group">
           <label>Negotiable Price?</label>
-          <select v-model="negotiable_price">
+          <select v-model="bike.negotiable_price">
             <option value="True">yes</option>
             <option value="False">No</option>
           </select>
         </div>
         <div class="form-group">
           <label>Price:</label>
-          <input type="text" class="form-control" v-model="price">
+          <input type="text" class="form-control" v-model="bike.price">
         </div>
         <div class="form-group">
            <label>Images:</label> <!-- REPLACE WITH UPLOAD FUNCTION -->
@@ -102,56 +102,42 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      seller_id: "", 
-      brand: "", 
-      model: "", 
-      size: "", 
-      speeds: "", 
-      plates: "", 
-      group: "", 
-      frame_material: "", 
-      fork_material: "", 
-      year_of_purchase: "", 
-      wheels: "", 
-      aestetic_condition: "", 
-      mechanical_condition: "", 
-      has_pedals: 0, 
-      original_receipt: 0, 
-      im_a_shop: 0, 
-      negotiable_price: 0, 
-      price: "", 
-      images: [], 
-      errors: [],
-      myOptions: [
-        {text: 'yes', value: true},
-        {text: 'no', value: false}
-      ]
+      bike: {},
+      errors: []
     };
+  },
+  created: function() {
+    console.log('in created on edit page')
+    axios.get(`/api/bikes/${this.$route.params.id}`).then(response => {
+      console.log(response.data);
+      this.bike = response.data;
+    });
   },
   methods: {
     submit: function() {
       var params = {
-        seller_id: this.seller_id,
-        brand: this.brand,
-        model: this.model,
-        size: this.size,
-        speeds: this.speeds,
-        plates: this.plates,
-        group: this.group,
-        frame_material: this.frame_material,
-        fork_material: this.fork_material,
-        year_of_purchase: this.year_of_purchase,
-        wheels: this.wheels,
-        aestetic_condition: this.aestetic_condition,
-        mechanical_condition: this.mechanical_condition,
-        has_pedals: this.has_pedals,
-        original_receipt: this.original_receipt,
-        im_a_shop: this.im_a_shop,
-        negotiable_price: this.negotiable_price,
-        price: this.price,
-        images: this.images
+        seller_id: this.bike.seller_id,
+        brand: this.bike.brand,
+        model: this.bike.model,
+        size: this.bike.size,
+        speeds: this.bike.speeds,
+        plates: this.bike.plates,
+        group: this.bike.group,
+        frame_material: this.bike.frame_material,
+        fork_material: this.bike.fork_material,
+        year_of_purchase: this.bike.year_of_purchase,
+        wheels: this.bike.wheels,
+        aestetic_condition: this.bike.aestetic_condition,
+        mechanical_condition: this.bike.mechanical_condition,
+        has_pedals: this.bike.has_pedals,
+        original_receipt: this.bike.original_receipt,
+        im_a_shop: this.bike.im_a_shop,
+        negotiable_price: this.bike.negotiable_price,
+        price: this.bike.price,
+        images: this.bike.images
       };
-      console.log(params)
+      console.log('params');
+      console.log(params);
       axios
         .post("/api/bikes", params)
         .then(response => {
