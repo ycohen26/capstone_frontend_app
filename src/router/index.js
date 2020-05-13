@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import BikesIndex from '../views/BikesIndex.vue'
-import BikesNew from '../views/BikesIndex.vue'
+import BikesNew from '../views/BikesNew.vue'
 import BikesShow from '../views/BikesShow.vue'
 import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
@@ -31,7 +31,7 @@ Vue.use(VueRouter)
     component: BikesIndex
   },
   {
-    path: '/bikes',
+    path: '/bikes/new',
     name: 'bikes-new',
     component: BikesNew
   },

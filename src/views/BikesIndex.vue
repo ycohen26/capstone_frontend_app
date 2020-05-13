@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div v-bind:key="bike.id" v-for="bike in bikes">
+    <div v-bind:key="bike.id" v-for="bike in bikes" v-on:click="$router.push(`/bikes/${bike.id}`)">
       <img v-bind:src="bike.photos[0].image_url"/>
       <p>id: {{ bike.id }}</p>
       <p>seller_id: {{ bike.seller_id }}</p>
