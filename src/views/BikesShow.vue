@@ -1,9 +1,7 @@
 <template>
   <div class="bikes-show">
+    
     <img v-for="photo in bike.photos" v-bind:src="photo.image_url"/>
-    <p>id: {{ bike.id }}</p>
-    <p>seller_id: {{ bike.seller_id }}</p>
-    <p>buyer_id: {{ bike.buyer_id }}</p>
     <p>brand: {{ bike.brand }}</p>
     <p>model: {{ bike.model }}</p>
     <p>size: {{ bike.size }}</p>

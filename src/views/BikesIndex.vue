@@ -28,50 +28,38 @@
     </div> -->
                 <!-- Banner -->
               <section>
-                <!-- <div class="content">
+                <div class="content">
                   <header>
-                    <h1>Hi, I’m Editorial<br />
-                    by HTML5 UP</h1>
-                    <p>A free and fully responsive site template</p>
+                    <h1>Welcome To CycloShop</h1>
+                    <p>THE PERFECT PLACE TO BUY AND SELL USED BIKES</p>
                   </header>
-                  <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-                  <ul class="actions">
-                    <li><a href="#" class="button big">Learn More</a></li>
-                  </ul>
                 </div>
-                <span class="image object">
-                  <img src="images/pic10.jpg" alt="" />
-                </span> -->
                 <header class="major">
                   <h2>Categories</h2>
                 </header>
                 <div class="features">
                   <article>
-                    <span class="icon fa-gem"></span>
+                    <span class="image left"><img src="images/roadicon.jpg" alt="" /></span>
                     <div class="content">
                       <h3>Road</h3>
-                      <!-- <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> -->
                     </div>
                   </article>
                   <article>
-                    <span class="icon solid fa-paper-plane"></span>
+                    <span class="image left"><img src="images/mountain.jpg" alt="" /></span>
                     <div class="content">
                       <h3>Mountain</h3>
-                      <!-- <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> -->
                     </div>
                   </article>
                   <article>
-                    <span class="icon solid fa-rocket"></span>
+                    <span class="image left"><img src="images/bmx-stunt-silhouette-2.jpg" alt="" /></span>
                     <div class="content">
                       <h3>BMX</h3>
-                      <!-- <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> -->
                     </div>
                   </article>
                   <article>
-                    <span class="icon solid fa-signal"></span>
+                    <span class="image left"><img src="images/triathlon.jpg" alt="" /></span>
                     <div class="content">
                       <h3>Triathlon</h3>
-                      <!-- <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> -->
                     </div>
                   </article>
                 </div>
@@ -84,31 +72,27 @@
                 </header>
                 <div class="features">
                   <article>
-                    <span class="icon fa-gem"></span>
+                    <span class="image left"><img src="images/trek.jpg" alt="" /></span>
                     <div class="content">
                       <h3>Trek</h3>
-                      <!-- <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> -->
                     </div>
                   </article>
                   <article>
-                    <span class="icon solid fa-paper-plane"></span>
+                    <span class="image left"><img src="images/orbea.jpg" alt="" /></span>
                     <div class="content">
                       <h3>Orbea</h3>
-                      <!-- <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> -->
                     </div>
                   </article>
                   <article>
-                    <span class="icon solid fa-rocket"></span>
+                    <span class="image left"><img src="images/cannondale.jpg" alt="" /></span>
                     <div class="content">
                       <h3>Cannondale</h3>
-                      <!-- <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> -->
                     </div>
                   </article>
                   <article>
-                    <span class="icon solid fa-signal"></span>
+                    <span class="image left"><img src="images/scott.jpg" alt="" /></span>
                     <div class="content">
                       <h3>Scott</h3>
-                      <!-- <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> -->
                     </div>
                   </article>
                 </div>
@@ -123,13 +107,9 @@
                   <article v-bind:key="bike.id" v-for="bike in bikes" v-on:click="$router.push(`/bikes/${bike.id}`)">
                     <a href="#" class="image"><img v-bind:src="bike.photos[0].image_url" alt="" /></a>
                     <h3>{{ bike.price }}</h3>
-                    <!-- <ul class="actions">
-                      <li><a href="#" class="button">More</a></li>
-                    </ul> -->
                   </article>
                 </div>
               </section>
-
   </div>
 </template>
 
