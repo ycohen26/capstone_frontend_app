@@ -40,34 +40,12 @@
                   <li><a href="/bikes">Homepage</a></li>
                   <li><a href="/bikes/new">Post a Bike</a></li>
                   <li><a href="/login">Login</a></li>
-                  <li>
-                    <span class="opener">Submenu</span>
-                    <ul>
-                      <li><a href="#">Lorem Dolor</a></li>
-                      <li><a href="#">Ipsum Adipiscing</a></li>
-                      <li><a href="#">Tempus Magna</a></li>
-                      <li><a href="#">Feugiat Veroeros</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Etiam Dolore</a></li>
-                  <li><a href="#">Adipiscing</a></li>
-                  <li>
-                    <span class="opener">Another Submenu</span>
-                    <ul>
-                      <li><a href="#">Lorem Dolor</a></li>
-                      <li><a href="#">Ipsum Adipiscing</a></li>
-                      <li><a href="#">Tempus Magna</a></li>
-                      <li><a href="#">Feugiat Veroeros</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Maximus Erat</a></li>
-                  <li><a href="#">Sapien Mauris</a></li>
-                  <li><a href="#">Amet Lacinia</a></li>
+                  <li><a href="/logout">Logout</a></li>
                 </ul>
               </nav>
 
             <!-- Section -->
-              <section>
+              <!-- <section>
                 <header class="major">
                   <h2>Ante interdum</h2>
                 </header>
@@ -88,19 +66,19 @@
                 <ul class="actions">
                   <li><a href="#" class="button">More</a></li>
                 </ul>
-              </section>
+              </section> -->
 
             <!-- Section -->
               <section>
                 <header class="major">
                   <h2>Get in touch</h2>
                 </header>
-                <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                <p>If you have any issues at all with your experience plese don't hesitate to call.</p>
                 <ul class="contact">
-                  <li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-                  <li class="icon solid fa-phone">(000) 000-0000</li>
+                  <li class="icon solid fa-envelope"><a href="#">information@cycloshop.com</a></li>
+                  <li class="icon solid fa-phone">(800) 123-4567</li>
                   <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-                  Nashville, TN 00000-0000</li>
+                  Nashville, TN 89343-7458</li>
                 </ul>
               </section>
 
@@ -109,11 +87,11 @@
                 <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.
                 </p>
               </footer>
-              ::after
+              <!-- ::after -->
           </div>
           <a href="#sidebar" class="toggle">
-            ::before
-            "Toggle" == $0
+            <!-- ::before -->
+            <!-- "Toggle" == $0 -->
             </a>
         </div>
 
@@ -124,6 +102,9 @@
 
 <script>
 export default {
+  mounted: {
+    
+  },
   methods: {
     isLoggedIn: function() {
       console.log(' i am checking if i\'m logged in')

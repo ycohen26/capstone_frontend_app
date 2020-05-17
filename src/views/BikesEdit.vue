@@ -139,7 +139,7 @@ export default {
       console.log('params');
       console.log(params);
       axios
-        .post("/api/bikes", params)
+        .patch(`/api/bikes/${this.$route.params.id}`, params)
         .then(response => {
           this.$router.push("/bikes");
         })
