@@ -106,7 +106,7 @@
                 <div class="posts">
                   <article v-bind:key="bike.id" v-for="bike in bikes" v-on:click="$router.push(`/bikes/${bike.id}`)">
                     <a href="#" class="image"><img v-bind:src="bike.photos[0].image_url" alt="" /></a>
-                    <h3>{{ bike.price }}</h3>
+                    <h3>${{ bike.price + "0"}}</h3>
                   </article>
                 </div>
               </section>

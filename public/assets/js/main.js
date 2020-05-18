@@ -5,7 +5,7 @@
 */
 
 (function($) {
-
+console.log("in main.js")
 	var	$window = $(window),
 		$head = $('head'),
 		$body = $('body');
@@ -92,7 +92,7 @@
 			$('<a href="#sidebar" class="toggle">Toggle</a>')
 				.appendTo($sidebar)
 				.on('click', function(event) {
-
+console.log("in the toggle")
 					// Prevent default.
 						event.preventDefault();
 						event.stopPropagation();
@@ -106,7 +106,7 @@
 
 			// Link clicks.
 				$sidebar.on('click', 'a', function(event) {
-
+console.log("in the link click")
 					// >large? Bail.
 						if (breakpoints.active('>large'))
 							return;

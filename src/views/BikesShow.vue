@@ -1,7 +1,10 @@
 <template>
   <div class="bikes-show">
-    <img v-for="photo in bike.photos" v-bind:src="photo.image_url"/>
-    <h1>${{ bike.price }}</h1>
+    <vueper-slides 3d fixed-height="800px" bullets-outside: false>
+    <!-- <vueper-slide v-for="photo in bike.photos" v-bind:src="photo.image_url" height="500" width="750"/> -->
+    <vueper-slide v-for="photo in bike.photos" :key="photo.id" :image="photo.image_url" />
+    </vueper-slides>
+    <h1>${{ bike.price + "0"}}</h1>
       <div class="table-wrapper">
         <table>
           <!-- <thead>
@@ -130,11 +133,14 @@
 
 <script>
 import axios from "axios";
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 
 export default {
+  components: { VueperSlides, VueperSlide },
   data: function() {
     return {
-      bike: {}
+      bike: {},
     };
   },
   created: function() {

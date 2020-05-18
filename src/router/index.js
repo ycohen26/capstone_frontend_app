@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Welcome from '../views/Welcome.vue'
 import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
@@ -11,6 +12,11 @@ import BikesEdit from '../views/BikesEdit.vue'
 Vue.use(VueRouter)
 
   const routes = [
+  {
+    path: '/',
+    name: 'Welcome',
+    component: Welcome
+  },
   {
     path: '/signup',
     name: 'Signup',

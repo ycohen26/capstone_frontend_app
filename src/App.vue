@@ -21,7 +21,8 @@
         </div>
 
       <!-- Sidebar -->
-        <div id="sidebar">
+        <div id="sidebar" class="toggle" v-bind:class="{inactive: isActive}">
+          <a v-on:click="toggleMenu()" href="#sidebar" class="toggle">Toggle</a>
           <div class="inner">
 
             <!-- Search -->
@@ -39,6 +40,7 @@
                 <ul>
                   <li><a href="/bikes">Homepage</a></li>
                   <li><a href="/bikes/new">Post a Bike</a></li>
+                  <li><a href="/signup">Signup</a></li>
                   <li><a href="/login">Login</a></li>
                   <li><a href="/logout">Logout</a></li>
                 </ul>
@@ -89,10 +91,6 @@
               </footer>
               <!-- ::after -->
           </div>
-          <a href="#sidebar" class="toggle">
-            <!-- ::before -->
-            <!-- "Toggle" == $0 -->
-            </a>
         </div>
 
     </div>
@@ -102,8 +100,10 @@
 
 <script>
 export default {
-  mounted: {
-    
+  data: function() {
+    return {
+      isActive: true
+    };
   },
   methods: {
     isLoggedIn: function() {
@@ -116,6 +116,9 @@ export default {
     },
     getUserId: function() {
       return parseInt(localStorage.getItem("user.id"));
+    },
+    toggleMenu: function() {
+      this.isActive = !this.isActive;
     }
   }
 }
