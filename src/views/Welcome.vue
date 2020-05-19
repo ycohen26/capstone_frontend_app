@@ -5,7 +5,7 @@
                 <div class="content">
                   <header>
                     <h1>Welcome To CycloShop</h1>
-                    <p>THE PERFECT PLACE TO BUY AND SELL USED BIKES</p>
+                    <p>THE PERFECT PLACE TO BUY AND SELL USED BIKES WITH PEACE OF MIND</p>
                   </header>
                 </div>
               <div class="col-6 col-12-small">

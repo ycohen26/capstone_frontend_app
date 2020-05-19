@@ -57,29 +57,29 @@
         <div class="form-group">
           <label>Has pedals?</label>
           <select v-model="bike.has_pedals">
-            <option value="True">yes</option>
-            <option value="False">No</option>
+            <option v-bind:value="true">yes</option>
+            <option v-bind:value="false">No</option>
           </select>
         </div>
         <div class="form-group">
           <label>Original receipt?</label>
           <select v-model="bike.original_receipt">
-            <option value="True">yes</option>
-            <option value="False">No</option>
+            <option v-bind:value="true">yes</option>
+            <option v-bind:value="false">No</option>
           </select>
         </div>
         <div class="form-group">
           <label>I'm a Shop?</label>
           <select v-model="bike.im_a_shop">
-            <option value="True">yes</option>
-            <option value="False">No</option>
+            <option v-bind:value="true">yes</option>
+            <option v-bind:value="false">No</option>
           </select>
         </div>
         <div class="form-group">
           <label>Negotiable Price?</label>
           <select v-model="bike.negotiable_price">
-            <option value="True">yes</option>
-            <option value="False">No</option>
+            <option v-bind:value="true">yes</option>
+            <option v-bind:value="false">No</option>
           </select>
         </div>
         <div class="form-group">

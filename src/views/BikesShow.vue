@@ -4,7 +4,15 @@
     <!-- <vueper-slide v-for="photo in bike.photos" v-bind:src="photo.image_url" height="500" width="750"/> -->
     <vueper-slide v-for="photo in bike.photos" :key="photo.id" :image="photo.image_url" />
     </vueper-slides>
+    <br>
+    <div class="row">
     <h1>${{ bike.price + "0"}}</h1>
+    <div class="col-12">
+      <ul class="actions stacked">
+        <li><a href="#" class="button primary large fit">Purchase</a></li>
+      </ul>
+    </div>
+    </div>
       <div class="table-wrapper">
         <table>
           <!-- <thead>
@@ -120,7 +128,17 @@
       </div>
     </div>
 </form>
-
+<!-- <stripe-checkout
+    ref="checkoutRef"
+    :pk="publishableKey"
+    :items="items"
+    :successUrl="successUrl"
+    :cancelUrl="cancelUrl"
+  >
+    <template slot="checkout-button">
+      <button @click="checkout">Shutup and take my money!</button>
+    </template>
+  </stripe-checkout> -->
 
     
 
@@ -135,6 +153,7 @@
 import axios from "axios";
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
+// import { StripeCheckout } from 'vue-stripe-checkout';
 
 export default {
   components: { VueperSlides, VueperSlide },
