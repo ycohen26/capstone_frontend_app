@@ -127,22 +127,7 @@
         </ul>
       </div>
     </div>
-</form>
-<!-- <stripe-checkout
-    ref="checkoutRef"
-    :pk="publishableKey"
-    :items="items"
-    :successUrl="successUrl"
-    :cancelUrl="cancelUrl"
-  >
-    <template slot="checkout-button">
-      <button @click="checkout">Shutup and take my money!</button>
-    </template>
-  </stripe-checkout> -->
-
-    
-
-
+    </form>
   </div>
 </template>
 
@@ -153,10 +138,10 @@
 import axios from "axios";
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
-// import { StripeCheckout } from 'vue-stripe-checkout';
 
 export default {
   components: { VueperSlides, VueperSlide },
+
   data: function() {
     return {
       bike: {},
